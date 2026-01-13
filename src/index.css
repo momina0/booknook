@@ -1,114 +1,138 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Patrick+Hand&family=Lato:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 35 35% 96%;
-    --foreground: 20 25% 15%;
+    /* Dreamy Pink & Purple Ghibli Theme */
+    --background: 320 40% 98%;
+    --foreground: 280 20% 20%;
 
-    --card: 38 40% 94%;
-    --card-foreground: 20 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 280 20% 20%;
 
-    --popover: 38 40% 94%;
-    --popover-foreground: 20 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 20% 20%;
 
-    --primary: 25 75% 47%;
-    --primary-foreground: 40 40% 98%;
+    --primary: 330 80% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 30% 88%;
-    --secondary-foreground: 20 30% 20%;
+    --secondary: 270 50% 92%;
+    --secondary-foreground: 270 40% 30%;
 
-    --muted: 30 25% 90%;
-    --muted-foreground: 20 15% 40%;
+    --muted: 320 30% 95%;
+    --muted-foreground: 280 15% 40%;
 
-    --accent: 15 65% 45%;
-    --accent-foreground: 40 40% 98%;
+    --accent: 270 60% 85%;
+    --accent-foreground: 270 40% 25%;
 
-    --destructive: 0 65% 50%;
+    --destructive: 0 55% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 20% 82%;
-    --input: 30 20% 82%;
-    --ring: 25 75% 47%;
+    --border: 330 40% 90%;
+    --input: 330 30% 95%;
+    --ring: 330 70% 65%;
 
-    --radius: 0.625rem;
+    --radius: 1.5rem;
 
-    --sidebar-background: 32 35% 92%;
-    --sidebar-foreground: 20 25% 15%;
-    --sidebar-primary: 25 75% 47%;
-    --sidebar-primary-foreground: 40 40% 98%;
-    --sidebar-accent: 35 30% 85%;
-    --sidebar-accent-foreground: 20 30% 20%;
-    --sidebar-border: 30 20% 82%;
-    --sidebar-ring: 25 75% 47%;
+    --sidebar-background: 320 50% 98%;
+    --sidebar-foreground: 280 20% 20%;
+    --sidebar-primary: 330 80% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 50% 95%;
+    --sidebar-accent-foreground: 330 60% 40%;
+    --sidebar-border: 330 40% 92%;
+    --sidebar-ring: 330 70% 65%;
 
-    --chart-1: 25 75% 47%;
-    --chart-2: 15 65% 45%;
-    --chart-3: 35 55% 55%;
-    --chart-4: 45 60% 50%;
-    --chart-5: 8 50% 40%;
+    --chart-1: 330 80% 70%;
+    --chart-2: 270 60% 70%;
+    --chart-3: 300 50% 75%;
+    --chart-4: 340 60% 80%;
+    --chart-5: 260 50% 75%;
 
-    --amber: 35 90% 50%;
-    --amber-foreground: 35 20% 15%;
-    --rust: 15 70% 40%;
-    --rust-foreground: 40 40% 98%;
-    --cream: 40 50% 95%;
-    --cream-foreground: 20 25% 15%;
+    /* Pink & Purple Color Palette */
+    --pink: 330 80% 72%;
+    --pink-light: 330 70% 88%;
+    --pink-dark: 330 75% 55%;
+    --pink-muted: 330 50% 85%;
+
+    --purple: 270 60% 72%;
+    --purple-light: 270 50% 88%;
+    --purple-dark: 270 55% 55%;
+    --purple-muted: 270 40% 85%;
+
+    --lavender: 280 45% 85%;
+    --lavender-light: 280 50% 92%;
+    --lavender-dark: 280 40% 65%;
+
+    --blush: 340 55% 82%;
+    --blush-light: 340 60% 92%;
+    --blush-dark: 340 50% 65%;
+
+    --cream: 45 50% 97%;
+    --cream-dark: 40 40% 92%;
+
+    /* Gradient colors */
+    --gradient-pink-start: #ffb6d9;
+    --gradient-pink-end: #ff8fab;
+    --gradient-purple-start: #d4b4f1;
+    --gradient-purple-end: #c39fe8;
+    --gradient-blush-start: #ffd4e5;
+    --gradient-blush-end: #ffc1dc;
+    --gradient-lavender-start: #e5d4ff;
+    --gradient-lavender-end: #d4b4ff;
+
+    /* Legacy support */
+    --sky-blue: 195 60% 72%;
+    --sky-blue-light: 200 50% 88%;
+    --mint: 160 35% 75%;
+    --mint-light: 160 40% 90%;
+    --peach: 25 60% 80%;
+    --goldenrod: 45 70% 70%;
+    --goldenrod-light: 48 75% 85%;
+    --amber: 45 70% 60%;
+    --amber-foreground: 25 30% 20%;
   }
 
   .dark {
-    --background: 20 20% 10%;
-    --foreground: 35 25% 92%;
-
-    --card: 20 18% 15%;
-    --card-foreground: 35 25% 92%;
-
-    --popover: 20 18% 15%;
-    --popover-foreground: 35 25% 92%;
-
-    --primary: 28 80% 55%;
-    --primary-foreground: 20 20% 10%;
-
-    --secondary: 20 15% 22%;
-    --secondary-foreground: 35 25% 92%;
-
-    --muted: 20 15% 22%;
-    --muted-foreground: 30 15% 60%;
-
-    --accent: 18 70% 50%;
-    --accent-foreground: 20 20% 10%;
-
-    --destructive: 0 60% 45%;
+    --background: 280 25% 8%;
+    --foreground: 320 40% 92%;
+    --card: 280 20% 12%;
+    --card-foreground: 320 40% 92%;
+    --popover: 280 20% 12%;
+    --popover-foreground: 320 40% 92%;
+    --primary: 330 75% 60%;
+    --primary-foreground: 280 25% 8%;
+    --secondary: 270 30% 20%;
+    --secondary-foreground: 270 50% 85%;
+    --muted: 280 20% 15%;
+    --muted-foreground: 320 30% 60%;
+    --accent: 270 40% 35%;
+    --accent-foreground: 270 50% 90%;
+    --destructive: 0 50% 45%;
     --destructive-foreground: 0 0% 100%;
+    --border: 280 20% 20%;
+    --input: 280 20% 18%;
+    --ring: 330 65% 55%;
+    --sidebar-background: 280 22% 10%;
+    --sidebar-foreground: 320 40% 92%;
+    --sidebar-primary: 330 75% 60%;
+    --sidebar-primary-foreground: 280 25% 8%;
+    --sidebar-accent: 280 25% 18%;
+    --sidebar-accent-foreground: 320 40% 92%;
+    --sidebar-border: 280 20% 20%;
+    --sidebar-ring: 330 65% 55%;
 
-    --border: 20 15% 25%;
-    --input: 20 15% 25%;
-    --ring: 28 80% 55%;
-
-    --sidebar-background: 20 18% 12%;
-    --sidebar-foreground: 35 25% 92%;
-    --sidebar-primary: 28 80% 55%;
-    --sidebar-primary-foreground: 20 20% 10%;
-    --sidebar-accent: 20 15% 20%;
-    --sidebar-accent-foreground: 35 25% 92%;
-    --sidebar-border: 20 15% 25%;
-    --sidebar-ring: 28 80% 55%;
-
-    --chart-1: 28 80% 55%;
-    --chart-2: 18 70% 50%;
-    --chart-3: 35 55% 55%;
-    --chart-4: 45 60% 50%;
-    --chart-5: 8 50% 50%;
-
-    --amber: 35 85% 55%;
-    --amber-foreground: 20 20% 10%;
-    --rust: 18 70% 50%;
-    --rust-foreground: 20 20% 10%;
-    --cream: 35 20% 20%;
-    --cream-foreground: 35 25% 92%;
+    --pink: 330 75% 60%;
+    --pink-light: 330 50% 30%;
+    --purple: 270 55% 55%;
+    --purple-light: 270 35% 25%;
+    --lavender: 280 35% 40%;
+    --lavender-light: 280 30% 25%;
+    --blush: 340 45% 50%;
+    --blush-light: 340 35% 25%;
+    --cream: 280 20% 15%;
   }
 }
 
@@ -118,11 +142,18 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Nunito", "Lato", sans-serif;
+    color: hsl(280 20% 25%);
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Fredoka", "Quicksand", sans-serif;
   }
 }
 
@@ -130,4 +161,361 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Ghibli-style fonts */
+  .font-display {
+    font-family: "Fredoka", sans-serif;
+  }
+
+  .font-body {
+    font-family: "Nunito", "Lato", sans-serif;
+  }
+
+  .font-cute {
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .font-handwriting {
+    font-family: "Patrick Hand", cursive;
+  }
+
+  /* Dreamy Pink/Purple backgrounds */
+  .dreamy-bg {
+    background: radial-gradient(
+        ellipse at 20% 30%,
+        rgba(255, 182, 217, 0.3) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 80% 20%,
+        rgba(229, 212, 255, 0.25) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 60% 70%,
+        rgba(255, 212, 229, 0.25) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 10% 80%,
+        rgba(212, 180, 241, 0.2) 0%,
+        transparent 40%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(255, 240, 255, 0.95) 0%,
+        rgba(250, 240, 255, 0.95) 100%
+      );
+  }
+
+  .watercolor-bg {
+    background: radial-gradient(
+        ellipse at 20% 30%,
+        rgba(255, 182, 217, 0.25) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 80% 20%,
+        rgba(229, 212, 255, 0.2) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 60% 70%,
+        rgba(255, 212, 229, 0.2) 0%,
+        transparent 50%
+      ),
+      linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--background)) 100%);
+  }
+
+  .watercolor-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 240, 255, 0.85) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 182, 217, 0.4);
+    border-radius: 2rem;
+  }
+
+  .glass-card-pink {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 182, 217, 0.3) 0%,
+      rgba(220, 180, 240, 0.3) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 182, 217, 0.5);
+    border-radius: 2rem;
+  }
+
+  /* Pink/Purple soft shadows */
+  .ghibli-shadow {
+    box-shadow: 0 8px 32px rgba(255, 182, 217, 0.2);
+  }
+
+  .ghibli-shadow-lg {
+    box-shadow: 0 8px 32px rgba(255, 182, 217, 0.25),
+      0 4px 16px rgba(212, 180, 241, 0.15);
+  }
+
+  .pink-shadow {
+    box-shadow: 0 8px 32px rgba(255, 182, 217, 0.3);
+  }
+
+  /* Pill-shaped elements */
+  .pill {
+    border-radius: 9999px;
+  }
+
+  /* Bento box cards */
+  .bento-card {
+    @apply rounded-3xl p-6;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .bento-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(255, 182, 217, 0.25);
+  }
+
+  /* Pink gradient buttons */
+  .pink-btn {
+    @apply pill px-6 py-3 font-cute font-semibold text-white;
+    background: linear-gradient(135deg, #ffb6d9 0%, #ff8fab 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 143, 171, 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .pink-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.5);
+  }
+
+  .pink-btn:active {
+    transform: scale(0.98);
+  }
+
+  .purple-btn {
+    @apply pill px-6 py-3 font-cute font-semibold text-white;
+    background: linear-gradient(135deg, #d4b4f1 0%, #c39fe8 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(195, 159, 232, 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .purple-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(195, 159, 232, 0.5);
+  }
+
+  /* Legacy ghibli-btn mapped to pink */
+  .ghibli-btn {
+    @apply pill px-6 py-3 font-cute font-semibold text-white;
+    background: linear-gradient(135deg, #ffb6d9 0%, #ff8fab 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 143, 171, 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .ghibli-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.5);
+  }
+
+  .ghibli-btn:active {
+    transform: scale(0.98);
+  }
+
+  .ghibli-btn-blush {
+    background: linear-gradient(135deg, #ffd4e5 0%, #ffc1dc 100%);
+    box-shadow: 0 4px 15px rgba(255, 193, 220, 0.4);
+  }
+
+  .ghibli-btn-lavender {
+    background: linear-gradient(135deg, #e5d4ff 0%, #d4b4ff 100%);
+    box-shadow: 0 4px 15px rgba(212, 180, 255, 0.4);
+  }
+
+  /* Icon color classes */
+  .icon-pink {
+    color: #ff8fab;
+  }
+
+  .icon-purple {
+    color: #c39fe8;
+  }
+
+  .icon-blush {
+    color: #ffc1dc;
+  }
+
+  .icon-lavender {
+    color: #d4b4ff;
+  }
+
+  /* Sticker styles */
+  .sticker {
+    @apply inline-flex items-center justify-center p-1 rounded-2xl cursor-pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .sticker:hover {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  .sticker-selected {
+    @apply ring-2 ring-offset-2;
+    ring-color: #ffb6d9;
+  }
+
+  /* Legacy shadows */
+  .cute-shadow {
+    box-shadow: 0 8px 32px rgba(255, 182, 217, 0.2);
+  }
+
+  /* Floating animations */
+  .float-slow {
+    animation: ghibli-float 6s ease-in-out infinite;
+  }
+
+  .float-medium {
+    animation: ghibli-float 4s ease-in-out infinite;
+  }
+
+  .float-fast {
+    animation: ghibli-float 2.5s ease-in-out infinite;
+  }
+
+  /* Fade in on scroll */
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Gentle glow */
+  .pink-glow {
+    box-shadow: 0 0 30px rgba(255, 182, 217, 0.4);
+  }
+
+  .purple-glow {
+    box-shadow: 0 0 30px rgba(212, 180, 241, 0.4);
+  }
+
+  /* Ghibli Input - pink themed */
+  .ghibli-input {
+    @apply pill px-4 py-2 bg-white/80 backdrop-blur-sm font-body;
+    border: 2px solid rgba(255, 182, 217, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .ghibli-input:focus {
+    border-color: #ffb6d9;
+    box-shadow: 0 0 0 4px rgba(255, 182, 217, 0.2);
+    outline: none;
+  }
+}
+
+/* Keyframe animations */
+@keyframes ghibli-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentleBounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes catWave {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes sparkleFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar - Pink theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 240, 250, 0.8);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffb6d9, #d4b4f1);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 240, 250, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff8fab, #c39fe8);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 182, 217, 0.4);
+  color: #4a3548;
 }
