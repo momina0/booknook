@@ -24,7 +24,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    
+    /* Fix phoenix error */
+    "types": []
   },
   "include": ["src"]
 }

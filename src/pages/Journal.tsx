@@ -52,7 +52,7 @@ export default function Journal() {
     setEditingEntry(null);
     setTitle("");
     setContent("");
-    setSelectedBookId("");
+    setSelectedBookId("none");
     setDialogOpen(true);
   };
 
@@ -60,7 +60,7 @@ export default function Journal() {
     setEditingEntry(entry);
     setTitle(entry.title);
     setContent(entry.content);
-    setSelectedBookId(entry.book_id || "");
+    setSelectedBookId(entry.book_id || "none");
     setDialogOpen(true);
   };
 
@@ -77,6 +77,9 @@ export default function Journal() {
 
     setSaving(true);
 
+    // Convert "none" to null for book_id
+    const bookId = selectedBookId === "none" ? null : selectedBookId || null;
+
     if (editingEntry) {
       // Update
       const { error } = await supabase
@@ -84,7 +87,7 @@ export default function Journal() {
         .update({
           title,
           content,
-          book_id: selectedBookId || null,
+          book_id: bookId,
         })
         .eq("id", editingEntry.id);
 
@@ -101,7 +104,7 @@ export default function Journal() {
         user_id: user!.id,
         title,
         content,
-        book_id: selectedBookId || null,
+        book_id: bookId,
       });
 
       if (error) {
@@ -175,7 +178,7 @@ export default function Journal() {
                       <SelectValue placeholder="Select a book" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">No book</SelectItem>
+                      <SelectItem value="none">No book</SelectItem>
                       {books.map((book) => (
                         <SelectItem key={book.id} value={book.id}>
                           {book.title}
