@@ -4,4 +4,4 @@ With its cute, cozy UI featuring watercolor-inspired designs and playful animati
 
 Built with React, PostgreSQL, and Groq LPU API, it delivers personalized recommendations in real time.
 
-Check it out here: https://lnkd.in/dxng_VCB
+Check it out here: https://booknook-lac.vercel.app
